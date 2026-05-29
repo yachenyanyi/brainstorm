@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brainstorm"
+version = "1.0.0"
+description = "多 AI 头脑风暴 CLI 工具 — 让两个 AI 协作讨论，产出更全面的建议"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["ai", "brainstorm", "cli", "claude", "gemini", "multi-agent"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+brainstorm = "brainstorm.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/anthropics/brainstorm"
+
+[tool.setuptools.packages.find]
+include = ["brainstorm*"]
